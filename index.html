@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<title>about me</title>
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <ul class="navbar" id="myNavbar">
+    <li><a href="#" class="padding-large">HOME</a></li>
+    <li class="hide-small right">
+      <a href="#" class="padding-large"><i class="fa fa-search"></i></a>
+    </li>
+  </ul>
+</div>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 opacity display-container">
+  <div class="display-middle">
+    <span class="center padding-xlarge grey xlarge wide animate-opacity"> Kayden<img class="container center" src="logo.png"/>Fletcher</span>
+  </div>
+</div>
+<!-- Container (About Section) -->
+<div class="content container padding-64" id="about">
+  <h3 class="center">ABOUT ME</h3><br>
+  <p class="center"><em>Pursuing limitless creations</em></p>
+  <p> I graduated from Republic Polytechnic (RP) with a Diploma in Technology and Art Managements.
+  Currently I'm undertaking part-time studies, BA in Digital Media with Web Comunication with Murdoch University.
+
+  I always have a great passion for the arts and through the course of study in RP, I became even more certain than ever on career path that I choose to take..
+
+  I want to be a Full Stack developer.
+
+  </p>
+  <div class="row">
+    <div class="col m12 center section">
+      <p><b>Seah Yi Ting</b></p><br>
+      <img src="P1.jpg" class="circle" alt="Photo of Me">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 display-container">
+  <div class="display-middle">
+    <span class="xxlarge text-light-grey wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="content container padding-64">
+  <h3 class="center">MY WORK</h3><br>
+  <p class="center"><em> produced for coursework & leisure</em></p><br>
+
+  <!-- Responsive Grid -->
+  <div class="row-padding center">
+    <div class="col m3">
+      <img src="Sketches/Hand bone Sketch .jpeg" style="width:100%">
+    </div>
+
+    <div class="col m3">
+      <img src="Sketches/arm.jpeg" style="width:100%">
+    </div>
+
+    <div class="col m3">
+      <img src="Sketches/Tress.jpeg" style="width:100%">
+    </div>
+    <div class="col m3">
+       <img src="Sketches/death.jpg" style="width:100%">
+
+  </div>
+
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 display-container">
+  <div class="display-middle">
+     <span class="xxlarge text-light-grey wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="content container padding-64">
+  <h3 class="center">Contact me</h3><br>
+  <p class="center"><em>You can reach me at..</em></p>
+
+  <div class="row padding-32 section">
+    <div class="col m4 container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="round-large"></div>
+    </div>
+    <div class="col m8 container section">
+      <div class="large margin-bottom">
+		<i class="fa fa-map-marker hover-text-black" style="width:30px"></i> Pasir Ris, SG<br>
+        <i class="fa fa-phone hover-text-black" style="width:30px"></i> Phone: +65 97109550<br>
+        <i class="fa fa-envelope hover-text-black" style="width:30px"> </i> Email: k.seahyt@gmail.com<br>
+      </div>
+      <p>Leave me a note or give me a call :</p>
+      <div class="row-padding" style="margin:0 -16px 8px -16px">
+        <div class="half">
+          <input class="input border" type="text" placeholder="Name">
+        </div>
+        <div class="half">
+          <input class="input border" type="text" placeholder="Email">
+        </div>
+      </div>
+      <input class="input border" type="text" placeholder="Message">
+      <button class="btn section right">SEND</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center dark-grey padding-48 hover-black">
+</footer>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(1.3646261,103.960663);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "navbar" + " card-2" + " animate-top" + " white";
+    } else {
+        navbar.className = navbar.className.replace(" card-2 animate-top white", "");
+    }
+}
+</script>
+</body>
+</html>
